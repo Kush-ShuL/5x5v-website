@@ -1,0 +1,291 @@
+/* 通用样式 */
+body {
+    font-family: 'Noto Sans SC', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a2e; /* 深色背景 */
+    color: #e0e0e0; /* 浅色文字 */
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 头部英雄区 */
+.hero {
+    background: url('../images/minecraft-bg.jpg.png') no-repeat center center/cover;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* 添加半透明黑色蒙层 */
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero .subtitle {
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* 按钮 */
+.button-group {
+    margin-top: 30px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 0 10px;
+}
+
+.button.primary {
+    background-color: #0f3460; /* 与主题色保持一致 */
+    color: white;
+}
+
+.button.primary:hover {
+    background-color: #d43a52;
+    transform: translateY(-2px);
+}
+
+.button.secondary {
+    background-color: #0f3460; /* 深蓝色 */
+    color: white;
+}
+
+.button.secondary:hover {
+    background-color: #0a2b50;
+    transform: translateY(-2px);
+}
+
+/* 内容区 */
+.section-padded {
+    padding: 80px 0;
+    background-color: #1a1a2e; /* 与body背景色保持一致 */
+    border-bottom: 5px solid #e94560; /* 亮红色分割线 */
+}
+
+.section-alt {
+    padding: 80px 0;
+    background-color: #1a1a2e; /* 与body背景色保持一致 */
+    border-bottom: 5px solid #0f3460; /* 深蓝色分割线 */
+}
+
+h2 {
+    color: #e94560; /* 亮红色 */
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #e94560; /* 亮红色 */
+    margin: 10px auto 0;
+}
+
+/* 特色网格 */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.feature-item {
+    background-color: #0f3460; /* 深蓝色 */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+}
+
+.feature-item h3 {
+    color: #e94560; /* 亮红色 */
+    font-size: 1.5em;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.feature-item p {
+    font-size: 1em;
+    color: #c0c0c0;
+}
+
+/* 加入信息 */
+.join-info {
+    background-color: #2e2e4a; /* 深色背景 */
+    padding: 30px; /* 增加内边距 */
+    border-radius: 8px;
+    border: 1px solid #0f3460; /* 与按钮深蓝色保持一致 */
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* 服务器状态详情 */
+.status-info {
+    background-color: #2e2e4a;
+    padding: 25px;
+    border-radius: 8px;
+    border: 1px solid #4a4a6a;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.status-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.server-icon {
+    width: 64px;
+    height: 64px;
+    margin-right: 15px;
+    border-radius: 8px;
+    border: 2px solid #0f3460; /* 与按钮深蓝色保持一致 */
+}
+
+#server-motd {
+    font-size: 1.8em;
+    color: #f6c700;
+    margin: 0;
+}
+
+.join-info p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.join-info strong {
+    color: #e94560;
+}
+
+.join-info .ip-address {
+    font-weight: bold;
+    color: #f6c700; /* 突出显示IP，黄色 */
+    margin-right: 10px;
+}
+
+.copy-button {
+    background-color: #e94560; /* 亮红色 */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.copy-button:hover {
+    background-color: #d43a52;
+    transform: translateY(-2px);
+}
+
+.join-info .discord-link {
+    color: #7289da; /* Discord蓝色 */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.join-info .discord-link:hover {
+    text-decoration: underline;
+}
+
+/* 底部 */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #0f3460; /* 深蓝色 */
+    color: white;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5em;
+    }
+
+    .hero .subtitle {
+        font-size: 1.2em;
+    }
+
+    .button {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-padded, .section-alt {
+        padding: 50px 0;
+    }
+
+    .join-info {
+        padding: 20px;
+    }
+
+    .join-info p {
+        font-size: 1em;
+    }
+
+    .copy-button {
+        padding: 6px 12px;
+        font-size: 0.8em;
+    }
+}
